@@ -1,7 +1,25 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import PageLayout from './components/layout/PageLayout'
+import Home from './pages/Home'
+import About from './pages/About'
+import Education from './pages/Education'
+import Leadership from './pages/Leadership'
+import Certifications from './pages/Certifications'
+import Contact from './pages/Contact'
+
 export default function App() {
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center">
-      <h1 className="text-columbia-blue text-4xl font-bold">Color test</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<PageLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/education" element={<Education />} />
+          <Route path="/leadership" element={<Leadership />} />
+          <Route path="/certifications" element={<Certifications />} />
+          <Route path="/contact" element={<Contact />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
