@@ -1,81 +1,76 @@
-import { experience } from '../data/experience'
-import { technicalSkills, leadershipSkills, softSkills } from '../data/skills'
+import { Link } from 'react-router-dom'
+
+const pillars = [
+  {
+    word: 'Authenticity',
+    body: 'Leadership starts with knowing who you are. I lead as myself — openly, consistently, and without pretense. People follow those they trust, and trust is built through honesty and transparency over time.',
+  },
+  {
+    word: 'Competency',
+    body: 'A leader earns credibility through their craft. Continuous learning, domain mastery, and the discipline to prepare thoroughly are what allow you to make sound decisions under pressure and give those you lead reason to follow.',
+  },
+  {
+    word: 'Growth',
+    body: 'The goal isn\'t to stay where you are — it\'s to leave people and organizations better than you found them. I actively seek challenge, embrace discomfort, and invest in developing the people around me.',
+  },
+]
+
+const subPages = [
+  {
+    to: '/leadership/experience',
+    icon: '💼',
+    title: 'Experience',
+    description: 'Roles, responsibilities, and the teams I\'ve led.',
+  },
+  {
+    to: '/leadership/skills',
+    icon: '⚡',
+    title: 'Skills',
+    description: 'Technical, leadership, and language capabilities.',
+  },
+  {
+    to: '/leadership/community',
+    icon: '🌐',
+    title: 'Community & Service',
+    description: 'How I give back and stay connected.',
+  },
+]
 
 export default function Leadership() {
-  const skillGroups = [
-    {
-      label: 'Technical',
-      skills: technicalSkills,
-      pillClass:
-        'bg-columbia-blue/10 text-columbia-blue border border-columbia-blue/20 text-xs px-3 py-1 rounded-full font-medium',
-    },
-    {
-      label: 'Leadership',
-      skills: leadershipSkills,
-      pillClass:
-        'bg-uh-red/10 text-uh-red border border-uh-red/20 text-xs px-3 py-1 rounded-full font-medium',
-    },
-    {
-      label: 'Core',
-      skills: softSkills,
-      pillClass:
-        'bg-white/5 text-muted border border-white/10 text-xs px-3 py-1 rounded-full font-medium',
-    },
-  ]
-
   return (
     <div className="max-w-4xl mx-auto px-6 py-20">
-      {/* Page heading */}
       <h1 className="text-off-white text-3xl font-bold tracking-tight">Leadership</h1>
-      <div className="w-16 h-0.5 bg-columbia-blue mt-2 mb-10" />
+      <div className="w-16 h-0.5 bg-columbia-blue mt-2 mb-14" />
 
-      {/* Experience subsection */}
-      <h2 className="text-off-white text-xl font-semibold mb-8">Experience</h2>
-
-      <div className="relative pl-6">
-        {/* Vertical timeline line */}
-        <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-columbia-blue/30" />
-
-        {experience.map((entry) => (
-          <div key={entry.id} className="relative mb-6">
-            {/* Timeline dot */}
-            <div className="absolute -left-[5px] w-2.5 h-2.5 rounded-full bg-columbia-blue top-6" />
-
-            {/* Card */}
-            <div className="bg-surface rounded-xl p-6 ml-4">
-              <p className="text-off-white font-bold text-lg">{entry.role}</p>
-              <p className="text-columbia-blue text-sm font-medium mt-0.5">{entry.organization}</p>
-              <p className="text-muted text-xs mt-1">{entry.dateRange}</p>
-
-              <ul className="mt-4 space-y-1">
-                {entry.bullets.map((bullet, i) => (
-                  <li key={i} className="text-muted text-sm flex gap-2">
-                    <span className="text-columbia-blue shrink-0">—</span>
-                    <span>{bullet}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+      {/* Philosophy pillars */}
+      <div className="space-y-16 mb-20">
+        {pillars.map(({ word, body }) => (
+          <div key={word} className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-8">
+            <p className="text-5xl font-bold text-columbia-blue/30 leading-none shrink-0 w-full sm:w-64">
+              {word}
+            </p>
+            <p className="text-muted text-base leading-relaxed pt-1">{body}</p>
           </div>
         ))}
       </div>
 
-      {/* Skills subsection */}
-      <div className="border-t border-white/5 mt-12 pt-10">
-        <h2 className="text-off-white text-xl font-semibold mb-8">Skills</h2>
-
-        <div className="space-y-6">
-          {skillGroups.map(({ label, skills, pillClass }) => (
-            <div key={label}>
-              <p className="text-muted text-xs uppercase tracking-widest mb-3">{label}</p>
-              <div className="flex flex-wrap gap-2">
-                {skills.map((skill) => (
-                  <span key={skill} className={pillClass}>
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
+      {/* Sub-page navigation cards */}
+      <div className="border-t border-white/5 pt-12">
+        <h2 className="text-off-white text-xl font-semibold mb-8">Explore</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {subPages.map(({ to, icon, title, description }) => (
+            <Link
+              key={to}
+              to={to}
+              className="bg-surface rounded-xl p-6 border border-white/5 hover:border-columbia-blue/40 transition-colors group"
+            >
+              <span className="text-2xl">{icon}</span>
+              <p className="text-off-white font-semibold mt-3 group-hover:text-columbia-blue transition-colors">
+                {title}
+              </p>
+              <p className="text-muted text-sm mt-1 leading-relaxed">{description}</p>
+              <p className="text-columbia-blue text-sm mt-4 font-medium">Explore →</p>
+            </Link>
           ))}
         </div>
       </div>
