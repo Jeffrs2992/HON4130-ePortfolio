@@ -49,7 +49,7 @@ export default function Home() {
         {/* CTA buttons */}
         <div className="flex gap-4 flex-wrap justify-center mt-8">
           <a
-            href="/resume.pdf"
+            href="/HON4130-ePortfolio/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-uh-red text-white px-6 py-3 rounded-lg font-medium hover:bg-uh-red/90 transition-colors"
