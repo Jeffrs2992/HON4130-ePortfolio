@@ -4,9 +4,9 @@ import { technicalSkills, leadershipSkills, softSkills } from '../data/skills'
 const highlights = [
   {
     id: 1,
-    skill: 'Arabic',
+    skill: 'Arabic (MSA)',
     narrative:
-      'Developed low-intermediate proficiency after spending a summer studying abroad in Morocco under Project GO (Global Officer), a DoD-funded program administered through the University of Maryland. Earned an OPIc score of 1 upon return.',
+      'Developed low-intermediate proficiency in Modern Standard Arabic after spending a summer studying abroad in Morocco under Project GO (Global Officer), a DoD-funded program administered through the University of Maryland. Earned an OPIc score of 1 upon return.',
     tag: 'Language / Study Abroad',
   },
 ]
