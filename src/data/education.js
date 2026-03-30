@@ -30,5 +30,5 @@ export const afrotc = {
   commissioning: '2nd Lieutenant, United States Air Force',
   afsc: '17X – Cyberspace Operations',
   description:
-    'Completed four years of military officer training alongside a full academic course load. Developed leadership, mission planning, and command skills through weekly labs, field training, and progressive leadership roles — from Logistics Officer to Deputy Wing Commander.',
+    'Completed four years of military officer training while carrying a full academic course load. Built leadership and mission planning skills through weekly labs, field training exercises, and progressively senior roles in the detachment, from Logistics Officer up to Deputy Wing Commander.',
 }

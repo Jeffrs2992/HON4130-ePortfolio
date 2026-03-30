@@ -43,7 +43,7 @@ export default function Home() {
 
         {/* Tagline */}
         <p className="text-muted text-base md:text-lg max-w-xl leading-relaxed mt-1">
-          Bridging the gap between technology and leadership&nbsp;— one mission at a time.
+          Bridging the gap between technology and leadership, one mission at a time.
         </p>
 
         {/* CTA buttons */}

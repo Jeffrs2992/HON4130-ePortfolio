@@ -36,12 +36,13 @@ export default function About() {
         {/* Left — bio (2/3 width) */}
         <div className="md:col-span-2">
           <p className="text-off-white/90 text-base md:text-lg leading-relaxed">
-            I&rsquo;m a senior at the University of Houston, double majoring in Accounting
-            and Management Information Systems within the Honors College. For the past
-            four years, I&rsquo;ve served in AFROTC and will commission as a 2nd Lieutenant
-            in the United States Air Force, designated as a 17X Cyberspace Operations
-            officer. I&rsquo;m passionate about the intersection of technology, leadership,
-            and national service.
+            I&rsquo;m a senior at the University of Houston studying Accounting and
+            Management Information Systems in the Honors College. I&rsquo;ve spent the
+            last four years in AFROTC and will be commissioning as a 2nd Lieutenant
+            in the United States Air Force as a 17X Cyberspace Operations officer.
+            Outside of school and ROTC, I&rsquo;m interested in how technology and
+            leadership overlap, and how that shows up in both the military and the
+            private sector.
           </p>
         </div>
 
