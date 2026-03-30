@@ -16,7 +16,7 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full z-50 bg-surface border-b border-white/5">
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
         <NavLink to="/" className="text-off-white font-bold text-lg tracking-tight hover:text-columbia-blue transition-colors">
-          Japhe
+          Japheth
         </NavLink>
 
         {/* Desktop links */}

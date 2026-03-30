@@ -1,16 +1,16 @@
 export default function About() {
   const principles = [
     {
-      title: 'Lead by Example',
-      body: 'Authority comes from action, not title. The standard you walk past is the standard you accept.',
+      title: 'Integrity First',
+      body: 'Integrity is the foundation of trust. Do what is right — legally and morally — even when no one is watching.',
     },
     {
-      title: 'Embrace Discomfort',
-      body: 'Growth lives outside the comfort zone. Seek hard things — they build character.',
+      title: 'Service Before Self',
+      body: 'The needs of the nation and the mission come before personal comfort and gain. Leaders put their people first.',
     },
     {
-      title: 'Serve Something Greater',
-      body: 'The mission is always bigger than any individual. Purpose and sacrifice go hand in hand.',
+      title: 'Excellence In All We Do',
+      body: 'Pursue the highest standards in everything. Continuous improvement is not optional — it is the mission.',
     },
   ]
 

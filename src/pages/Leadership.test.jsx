@@ -15,6 +15,6 @@ describe('Leadership', () => {
 
   it('renders at least one experience entry', () => {
     render(<MemoryRouter><Leadership /></MemoryRouter>)
-    expect(screen.getByText(/Cadet Wing Commander/i)).toBeInTheDocument()
+    expect(screen.getByText(/Deputy Wing Commander/i)).toBeInTheDocument()
   })
 })

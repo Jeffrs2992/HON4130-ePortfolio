@@ -30,7 +30,7 @@ export default function Home() {
           className="text-5xl md:text-7xl lg:text-8xl font-bold text-off-white tracking-widest uppercase"
           style={{ letterSpacing: '0.15em' }}
         >
-          Japhe
+          Japheth
         </h1>
 
         {/* Rank stripe — columbia blue decorative rule */}
@@ -38,7 +38,7 @@ export default function Home() {
 
         {/* Subtitle — monospace terminal readout */}
         <p className="font-mono text-columbia-blue text-sm md:text-base tracking-wide">
-          2Lt, USAF&nbsp;&nbsp;|&nbsp;&nbsp;Cyberspace Operations&nbsp;&nbsp;|&nbsp;&nbsp;University of Houston&nbsp;&#39;25
+          2Lt, USAF&nbsp;&nbsp;|&nbsp;&nbsp;Cyberspace Operations&nbsp;&nbsp;|&nbsp;&nbsp;University of Houston&nbsp;&#39;26
         </p>
 
         {/* Tagline */}

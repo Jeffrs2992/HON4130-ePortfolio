@@ -5,7 +5,7 @@ import Home from './Home'
 describe('Home', () => {
   it('renders name and subtitle', () => {
     render(<MemoryRouter><Home /></MemoryRouter>)
-    expect(screen.getByText('Japhe')).toBeInTheDocument()
+    expect(screen.getByText('Japheth')).toBeInTheDocument()
     expect(screen.getByText(/Cyberspace Operations/i)).toBeInTheDocument()
   })
 
