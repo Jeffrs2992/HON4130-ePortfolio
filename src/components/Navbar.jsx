@@ -4,7 +4,7 @@ import { useState } from 'react'
 const navLinks = [
   { to: '/about', label: 'About' },
   { to: '/education', label: 'Education' },
-  { to: '/leadership', label: 'Leadership' },
+  { to: '/leadership', label: 'Leadership', end: false },
   { to: '/certifications', label: 'Certifications' },
   { to: '/contact', label: 'Contact' },
 ]
@@ -21,10 +21,11 @@ export default function Navbar() {
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map(({ to, label }) => (
+          {navLinks.map(({ to, label, end }) => (
             <NavLink
               key={to}
               to={to}
+              end={end}
               className={({ isActive }) =>
                 `text-sm font-medium transition-colors pb-1 border-b-2 ${
                   isActive
@@ -51,10 +52,11 @@ export default function Navbar() {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden bg-surface border-t border-white/5 px-6 py-4 flex flex-col gap-4">
-          {navLinks.map(({ to, label }) => (
+          {navLinks.map(({ to, label, end }) => (
             <NavLink
               key={to}
               to={to}
+              end={end}
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
                 `text-sm font-medium ${isActive ? 'text-off-white' : 'text-muted hover:text-off-white'} transition-colors`

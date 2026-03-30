@@ -1,8 +1,12 @@
+import { Link } from 'react-router-dom'
 import { experience } from '../data/experience'
 
 export default function LeadershipExperience() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-20">
+      <Link to="/leadership" className="text-muted text-sm hover:text-columbia-blue transition-colors mb-8 inline-block">
+        ← Leadership
+      </Link>
       <h1 className="text-off-white text-3xl font-bold tracking-tight">Experience</h1>
       <div className="w-16 h-0.5 bg-columbia-blue mt-2 mb-10" />
 
