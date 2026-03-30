@@ -2,7 +2,7 @@ export default function About() {
   const principles = [
     {
       title: 'Integrity First',
-      body: 'Integrity is the foundation of trust. Do what is right — legally and morally — even when no one is watching.',
+      body: 'Integrity is the foundation of trust. Do what is right, legally and morally, even when no one is watching.',
     },
     {
       title: 'Service Before Self',
@@ -10,7 +10,7 @@ export default function About() {
     },
     {
       title: 'Excellence In All We Do',
-      body: 'Pursue the highest standards in everything. Continuous improvement is not optional — it is the mission.',
+      body: 'Pursue the highest standards in everything. Continuous improvement is not optional. It is the mission.',
     },
   ]
 
