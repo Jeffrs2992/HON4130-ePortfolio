@@ -10,6 +10,6 @@ describe('Certifications', () => {
 
   it('renders certification entries', () => {
     render(<MemoryRouter><Certifications /></MemoryRouter>)
-    expect(screen.getByText(/Honors College Scholar/i)).toBeInTheDocument()
+    expect(screen.getByText(/Field Training Graduate/i)).toBeInTheDocument()
   })
 })
