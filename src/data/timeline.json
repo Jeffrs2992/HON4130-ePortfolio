@@ -1,7 +1,7 @@
 [
   {
     "id": "commission-2lt-usaf",
-    "date": "2026-05-10",
+    "date": "2026-05",
     "type": "milestone",
     "title": "Commission — 2Lt, USAF",
     "organization": "17X Cyberspace Operations",
@@ -15,7 +15,7 @@
   },
   {
     "id": "bba-graduation-uh",
-    "date": "2026-05-09",
+    "date": "2026-05",
     "type": "milestone",
     "title": "B.B.A. Graduation",
     "organization": "University of Houston",
@@ -82,24 +82,6 @@
     "highlight": true
   },
   {
-    "id": "pwc-start-audit-intern",
-    "date": "2024-05",
-    "type": "role",
-    "title": "START Audit Intern",
-    "organization": "PwC",
-    "dateRange": "Summer 2024",
-    "tags": ["professional", "accounting"],
-    "summary": "Spent the summer embedded with audit teams at PwC as part of the START Audit program, learning how a Big Four firm serves clients and what a professional career in accounting looks like on the ground.",
-    "bullets": [
-      "Assisted senior associates on financial statement audits for mid-market clients",
-      "Prepared and reviewed workpapers in line with PCAOB standards",
-      "Participated in START cohort workshops on audit methodology and firm culture"
-    ],
-    "photo": null,
-    "photos": [],
-    "highlight": true
-  },
-  {
     "id": "logistics-officer",
     "date": "2024-08",
     "type": "role",
@@ -112,6 +94,24 @@
       "Coordinated equipment accountability and logistics for wing training events",
       "Managed scheduling and resource allocation across squadron activities",
       "Ensured readiness and availability of training materials and gear"
+    ],
+    "photo": null,
+    "photos": [],
+    "highlight": true
+  },
+  {
+    "id": "pwc-start-audit-intern",
+    "date": "2024-05",
+    "type": "role",
+    "title": "START Audit Intern",
+    "organization": "PwC",
+    "dateRange": "Summer 2024",
+    "tags": ["professional", "accounting"],
+    "summary": "Spent the summer embedded with audit teams at PwC as part of the START Audit program, learning how a Big Four firm serves clients and what a professional career in accounting looks like on the ground.",
+    "bullets": [
+      "Assisted senior associates on financial statement audits for mid-market clients",
+      "Prepared and reviewed workpapers in line with PCAOB standards",
+      "Participated in START cohort workshops on audit methodology and firm culture"
     ],
     "photo": null,
     "photos": [],
