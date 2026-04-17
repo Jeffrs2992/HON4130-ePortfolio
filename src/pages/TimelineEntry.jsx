@@ -24,7 +24,7 @@ export default function TimelineEntry() {
 
   if (!entry) {
     return (
-      <div className="max-w-4xl mx-auto px-6 py-20">
+      <div className="max-w-3xl mx-auto px-6 py-20">
         <Link to="/about" className="text-muted text-sm hover:text-columbia-blue transition-colors mb-8 inline-block">
           ← Timeline
         </Link>
