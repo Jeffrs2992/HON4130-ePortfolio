@@ -38,24 +38,26 @@ The "Certifications" nav link is removed. Certifications and awards content move
 
 ## Data Architecture
 
-### `src/data/timeline.js`
+### `src/data/timeline.json`
 
-Single source of truth for all timeline entries. Shape:
+Single source of truth for all timeline entries. Plain JSON — no JavaScript syntax required. Editable directly in GitHub's web UI (github.com → file → pencil icon) without local setup. Claude can also update it from a plain description ("add an entry for X").
 
-```js
+Shape of each entry in the top-level array:
+
+```json
 {
-  id: 'deputy-wing-commander',     // slug used in URL: /timeline/:id
-  date: '2026-01',                 // ISO-ish YYYY-MM, used for sort + year grouping
-  type: 'role',                    // role | milestone | training | award
-  title: 'Deputy Wing Commander',
-  organization: 'AFROTC Det 003',
-  dateRange: 'Jan – May 2026',
-  tags: ['afrotc', 'leadership'],  // map to top-level routes via tagRoutes.js
-  summary: 'Short teaser paragraph shown inline on the timeline.',
-  bullets: [...],                  // optional — used by role and training types
-  photo: null,                     // path to hero image, null until added
-  photos: [],                      // additional photos for detail page
-  highlight: true,                 // false = in data but hidden from timeline
+  "id": "deputy-wing-commander",
+  "date": "2026-01",
+  "type": "role",
+  "title": "Deputy Wing Commander",
+  "organization": "AFROTC Det 003",
+  "dateRange": "Jan – May 2026",
+  "tags": ["afrotc", "leadership"],
+  "summary": "Short teaser paragraph shown inline on the timeline.",
+  "bullets": [],
+  "photo": null,
+  "photos": [],
+  "highlight": true
 }
 ```
 
@@ -177,7 +179,7 @@ All detail pages share a common outer structure:
 
 | File | Purpose |
 |---|---|
-| `src/data/timeline.js` | Timeline entries data |
+| `src/data/timeline.json` | Timeline entries data (plain JSON, no JS syntax) |
 | `src/data/tagRoutes.js` | Tag → route mapping |
 | `src/pages/TimelineEntry.jsx` | Detail page router (reads `:id`, selects template by type) |
 | `src/components/timeline/TimelineRail.jsx` | Timeline scroll component used on About Me |
@@ -209,6 +211,48 @@ All detail pages share a common outer structure:
 |---|---|
 | `src/pages/Certifications.jsx` | Content moved to LeadershipSkills |
 | `src/data/certifications.js` | Kept as-is — LeadershipSkills continues to use it for the tile grid. Any award entries that appear on the timeline are defined separately in timeline.js. |
+
+---
+
+## Adding Content in the Future
+
+Two ways to add or update timeline entries — no local setup required for either.
+
+### Option 1: Tell Claude (fastest)
+
+Open a new Claude Code session and say something like:
+
+> "Add a new timeline entry. It was a training event called [X] at [organization] in [month/year]. Here's what happened: [description]. Tags: training, afrotc."
+
+Claude will update `src/data/timeline.json` directly, set `highlight: true`, and commit. You can also say "add a photo" and provide the file — Claude will place it in `public/timeline/[entry-id]/` and update the `photo` field.
+
+### Option 2: GitHub web editor (no Claude)
+
+1. Go to your repo on github.com
+2. Navigate to `src/data/timeline.json`
+3. Click the pencil (Edit) icon
+4. Copy an existing entry block, paste it at the top of the array, and fill in your details
+5. Set `"highlight": true` to show it on the timeline, `false` to hide it
+6. Commit directly to `main` — GitHub Actions will deploy automatically
+
+**Photos:** Go to `public/timeline/` in the GitHub file browser → Add file → Upload. Name the folder after your entry's `id`. Then update the `"photo"` field in `timeline.json` to `"/HON4130-ePortfolio/timeline/[entry-id]/hero.jpg"`.
+
+### Field reference
+
+| Field | Required | Notes |
+|---|---|---|
+| `id` | Yes | URL slug, lowercase, hyphens only. Must be unique. |
+| `date` | Yes | `YYYY-MM` format. Used for sort order and year grouping. |
+| `type` | Yes | `role`, `milestone`, `training`, or `award` |
+| `title` | Yes | Displayed as heading |
+| `organization` | Yes | Displayed in Columbia Blue below title |
+| `dateRange` | Yes | Human-readable, e.g. `"Jan – May 2026"` |
+| `tags` | Yes | Array of strings. Must exist in `tagRoutes.js` to be clickable. |
+| `summary` | Yes | 2-4 sentence teaser shown on the timeline card |
+| `bullets` | No | Array of strings. Used by `role` and `training` types. |
+| `photo` | No | Path to hero image. `null` shows a placeholder. |
+| `photos` | No | Array of paths for additional photos (milestone type). |
+| `highlight` | Yes | `true` = shows on timeline. `false` = hidden but preserved. |
 
 ---
 
