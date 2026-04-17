@@ -3,13 +3,18 @@ import { MemoryRouter } from 'react-router-dom'
 import About from './About'
 
 describe('About', () => {
-  it('renders the about heading', () => {
+  it('renders About Me heading', () => {
     render(<MemoryRouter><About /></MemoryRouter>)
-    expect(screen.getByText(/About Me/i)).toBeInTheDocument()
+    expect(screen.getByText('About Me')).toBeInTheDocument()
   })
 
-  it('renders philosophy section', () => {
+  it('does not render Guiding Principles', () => {
     render(<MemoryRouter><About /></MemoryRouter>)
-    expect(screen.getByText(/Guiding Principles/i)).toBeInTheDocument()
+    expect(screen.queryByText(/Guiding Principles/i)).not.toBeInTheDocument()
+  })
+
+  it('renders the Timeline section heading', () => {
+    render(<MemoryRouter><About /></MemoryRouter>)
+    expect(screen.getByText('Timeline')).toBeInTheDocument()
   })
 })
