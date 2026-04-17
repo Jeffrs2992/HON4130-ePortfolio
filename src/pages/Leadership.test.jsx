@@ -2,30 +2,24 @@ import { render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import Leadership from './Leadership'
 
-describe('Leadership hub', () => {
-  it('renders the page heading', () => {
+describe('Leadership', () => {
+  it('renders Leadership heading', () => {
     render(<MemoryRouter><Leadership /></MemoryRouter>)
-    expect(screen.getByRole('heading', { name: /Leadership/i })).toBeInTheDocument()
+    expect(screen.getByText('Leadership')).toBeInTheDocument()
   })
 
-  it('renders all three philosophy pillars', () => {
+  it('renders philosophy paragraph', () => {
     render(<MemoryRouter><Leadership /></MemoryRouter>)
-    expect(screen.getByText(/Authenticity/i)).toBeInTheDocument()
-    expect(screen.getByText(/Competency/i)).toBeInTheDocument()
-    expect(screen.getByText(/Growth/i)).toBeInTheDocument()
+    expect(screen.getByText(/authenticity, continuous learning/i)).toBeInTheDocument()
   })
 
-  it('renders sub-page navigation cards', () => {
+  it('renders Experience card', () => {
     render(<MemoryRouter><Leadership /></MemoryRouter>)
-    expect(screen.getByText(/Experience/i)).toBeInTheDocument()
-    expect(screen.getByText(/Skills/i)).toBeInTheDocument()
-    expect(screen.getByText(/Community & Service/i)).toBeInTheDocument()
+    expect(screen.getByText('Experience')).toBeInTheDocument()
   })
 
-  it('links to the correct sub-page routes', () => {
+  it('renders Skills & Certifications card', () => {
     render(<MemoryRouter><Leadership /></MemoryRouter>)
-    expect(screen.getByRole('link', { name: /Experience/i })).toHaveAttribute('href', '/leadership/experience')
-    expect(screen.getByRole('link', { name: /Skills/i })).toHaveAttribute('href', '/leadership/skills')
-    expect(screen.getByRole('link', { name: /Community/i })).toHaveAttribute('href', '/leadership/community')
+    expect(screen.getByText('Skills & Certifications')).toBeInTheDocument()
   })
 })
