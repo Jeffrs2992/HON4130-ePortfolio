@@ -1,5 +1,13 @@
 import { Link } from 'react-router-dom'
 import { technicalSkills, leadershipSkills, softSkills } from '../data/skills'
+import { certifications } from '../data/certifications'
+
+const typeLabel = { certification: 'Certification', award: 'Award', military: 'Military' }
+const typePill = {
+  certification: 'bg-columbia-blue/10 text-columbia-blue border border-columbia-blue/20',
+  award: 'bg-yellow-500/15 text-yellow-400 border border-yellow-500/20',
+  military: 'bg-uh-red/10 text-uh-red border border-uh-red/20',
+}
 
 const highlights = [
   {
@@ -38,7 +46,7 @@ export default function LeadershipSkills() {
       <Link to="/leadership" className="text-muted text-sm hover:text-columbia-blue transition-colors mb-8 inline-block">
         ← Leadership
       </Link>
-      <h1 className="text-off-white text-3xl font-bold tracking-tight">Skills</h1>
+      <h1 className="text-off-white text-3xl font-bold tracking-tight">Skills & Certifications</h1>
       <div className="w-16 h-0.5 bg-columbia-blue mt-2 mb-10" />
 
       {/* Featured highlights */}
@@ -55,6 +63,23 @@ export default function LeadershipSkills() {
             <p className="text-muted text-sm mt-3 leading-relaxed">{item.narrative}</p>
           </div>
         ))}
+      </div>
+
+      {/* Certifications & Awards */}
+      <div className="border-t border-white/5 pt-10 mb-12">
+        <h2 className="text-off-white text-xl font-semibold mb-6">Certifications & Awards</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {certifications.map(({ id, name, issuer, date, type }) => (
+            <div key={id} className="bg-surface rounded-xl p-5 border border-white/5">
+              <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${typePill[type] ?? 'bg-white/5 text-muted border border-white/10'}`}>
+                {typeLabel[type] ?? type}
+              </span>
+              <p className="text-off-white font-semibold mt-3 text-sm leading-snug">{name}</p>
+              <p className="text-muted text-xs mt-1">{issuer}</p>
+              <p className="text-muted text-xs mt-0.5 opacity-70">{date}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* General skill pills */}
