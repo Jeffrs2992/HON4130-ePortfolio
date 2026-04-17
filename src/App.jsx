@@ -7,7 +7,7 @@ import Leadership from './pages/Leadership'
 import LeadershipExperience from './pages/LeadershipExperience'
 import LeadershipSkills from './pages/LeadershipSkills'
 import LeadershipCommunity from './pages/LeadershipCommunity'
-import Certifications from './pages/Certifications'
+import TimelineEntry from './pages/TimelineEntry'
 import Contact from './pages/Contact'
 
 export default function App() {
@@ -17,12 +17,12 @@ export default function App() {
         <Route element={<PageLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/timeline/:id" element={<TimelineEntry />} />
           <Route path="/education" element={<Education />} />
           <Route path="/leadership" element={<Leadership />} />
           <Route path="/leadership/experience" element={<LeadershipExperience />} />
           <Route path="/leadership/skills" element={<LeadershipSkills />} />
           <Route path="/leadership/community" element={<LeadershipCommunity />} />
-          <Route path="/certifications" element={<Certifications />} />
           <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>
