@@ -1,3 +1,4 @@
+// src/components/timeline/templates/TravelDetail.jsx
 import { Link } from 'react-router-dom'
 import { tagMeta, defaultTagColor } from '../../../data/tagRoutes'
 
