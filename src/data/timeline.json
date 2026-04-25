@@ -64,6 +64,21 @@
     "highlight": true
   },
   {
+    "id": "virginia-north-carolina",
+    "date": "2025-03",
+    "type": "travel",
+    "title": "Virginia + North Carolina",
+    "organization": "USA",
+    "dateRange": "Spring 2025",
+    "tags": ["travel"],
+    "summary": "A spring break road trip through Virginia and North Carolina.",
+    "narrative": "",
+    "bullets": [],
+    "photo": null,
+    "photos": [],
+    "highlight": true
+  },
+  {
     "id": "cyber-officer",
     "date": "2025-01",
     "type": "role",
@@ -82,6 +97,36 @@
     "highlight": true
   },
   {
+    "id": "national-parks-road-trip",
+    "date": "2024-12",
+    "type": "travel",
+    "title": "14 National Parks",
+    "organization": "USA",
+    "dateRange": "Winter 2024",
+    "tags": ["travel", "road-trip"],
+    "summary": "A winter break road trip through 14 national parks across the American West.",
+    "narrative": "",
+    "bullets": [],
+    "photo": null,
+    "photos": [],
+    "highlight": true
+  },
+  {
+    "id": "seattle-boston",
+    "date": "2024-11",
+    "type": "travel",
+    "title": "Seattle + Boston",
+    "organization": "USA",
+    "dateRange": "Thanksgiving 2024",
+    "tags": ["travel"],
+    "summary": "Thanksgiving break trips to Seattle and Boston.",
+    "narrative": "",
+    "bullets": [],
+    "photo": null,
+    "photos": [],
+    "highlight": true
+  },
+  {
     "id": "logistics-officer",
     "date": "2024-08",
     "type": "role",
@@ -94,6 +139,25 @@
       "Coordinated equipment accountability and logistics for wing training events",
       "Managed scheduling and resource allocation across squadron activities",
       "Ensured readiness and availability of training materials and gear"
+    ],
+    "photo": null,
+    "photos": [],
+    "highlight": true
+  },
+  {
+    "id": "morocco-project-go",
+    "date": "2024-06",
+    "type": "travel",
+    "title": "Morocco",
+    "organization": "University of Maryland · Project GO",
+    "dateRange": "Summer 2024",
+    "tags": ["travel", "study-abroad", "afrotc"],
+    "summary": "Spent the summer studying Modern Standard Arabic in Morocco through Project GO — a DoD-funded program for ROTC cadets.",
+    "narrative": "",
+    "bullets": [
+      "Earned OPIc score of 1 in Modern Standard Arabic",
+      "Completed DoD Project GO language immersion program",
+      "Traveled to Marrakech, Fes, and the Atlas Mountains"
     ],
     "photo": null,
     "photos": [],

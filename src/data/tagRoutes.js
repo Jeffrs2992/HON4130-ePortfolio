@@ -8,6 +8,9 @@ export const tagMeta = {
   accounting:   { to: '/education',  colorClass: 'bg-yellow-500/15 text-yellow-400' },
   education:    { to: '/education',  colorClass: 'bg-columbia-blue/10 text-columbia-blue' },
   training:     { to: '/leadership', colorClass: 'bg-emerald-500/15 text-emerald-400' },
+  travel:          { to: '/travel', colorClass: 'bg-columbia-blue/10 text-columbia-blue' },
+  'study-abroad':  { to: '/travel', colorClass: 'bg-emerald-500/15 text-emerald-400' },
+  'road-trip':     { to: '/travel', colorClass: 'bg-yellow-500/15 text-yellow-400' },
 }
 
 // Fallback for tags not listed above
