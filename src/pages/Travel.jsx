@@ -1,3 +1,4 @@
+// src/pages/Travel.jsx
 import timelineData from '../data/timeline.json'
 import TravelCard from '../components/travel/TravelCard'
 
