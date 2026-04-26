@@ -3,7 +3,6 @@ import { MemoryRouter } from 'react-router-dom'
 import { describe, it, expect, vi } from 'vitest'
 import TimelineRail from './TimelineRail'
 
-// Override timeline.json with controlled test data
 vi.mock('../../data/timeline.json', () => ({
   default: [
     {
@@ -15,6 +14,7 @@ vi.mock('../../data/timeline.json', () => ({
       dateRange: 'May 2026',
       tags: ['milestone'],
       summary: 'Summary A',
+      narrative: '',
       photo: null,
       photos: [],
       highlight: true,
@@ -28,6 +28,21 @@ vi.mock('../../data/timeline.json', () => ({
       dateRange: 'Aug 2025',
       tags: ['afrotc'],
       summary: 'Summary B',
+      narrative: '',
+      photo: null,
+      photos: [],
+      highlight: true,
+    },
+    {
+      id: 'entry-travel',
+      date: '2024-06',
+      type: 'travel',
+      title: 'Morocco',
+      organization: 'University of Maryland · Project GO',
+      dateRange: 'Summer 2024',
+      tags: ['travel', 'study-abroad'],
+      summary: 'A summer in Morocco.',
+      narrative: '',
       photo: null,
       photos: [],
       highlight: true,
@@ -41,6 +56,7 @@ vi.mock('../../data/timeline.json', () => ({
       dateRange: 'Jan 2025',
       tags: ['afrotc'],
       summary: 'Should not appear',
+      narrative: '',
       photo: null,
       photos: [],
       highlight: false,
@@ -50,33 +66,26 @@ vi.mock('../../data/timeline.json', () => ({
 
 describe('TimelineRail', () => {
   it('renders highlighted entries only', () => {
-    render(
-      <MemoryRouter>
-        <TimelineRail />
-      </MemoryRouter>
-    )
+    render(<MemoryRouter><TimelineRail /></MemoryRouter>)
     expect(screen.getByText('Entry A')).toBeInTheDocument()
     expect(screen.getByText('Entry B')).toBeInTheDocument()
     expect(screen.queryByText('Hidden Entry')).not.toBeInTheDocument()
   })
 
+  it('renders travel entries with highlight:true on the rail', () => {
+    render(<MemoryRouter><TimelineRail /></MemoryRouter>)
+    expect(screen.getByText('Morocco')).toBeInTheDocument()
+  })
+
   it('renders entries in descending date order (newest first)', () => {
-    render(
-      <MemoryRouter>
-        <TimelineRail />
-      </MemoryRouter>
-    )
+    render(<MemoryRouter><TimelineRail /></MemoryRouter>)
     const titles = screen.getAllByText(/Entry [AB]/)
     expect(titles[0].textContent).toBe('Entry A')
     expect(titles[1].textContent).toBe('Entry B')
   })
 
   it('renders a year marker for each distinct year', () => {
-    render(
-      <MemoryRouter>
-        <TimelineRail />
-      </MemoryRouter>
-    )
+    render(<MemoryRouter><TimelineRail /></MemoryRouter>)
     expect(screen.getByText('2026')).toBeInTheDocument()
     expect(screen.getByText('2025')).toBeInTheDocument()
   })
