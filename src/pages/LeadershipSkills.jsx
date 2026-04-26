@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { education, afrotc } from '../data/education'
 import { technicalSkills, leadershipSkills, softSkills } from '../data/skills'
 import { certifications } from '../data/certifications'
 
@@ -46,23 +47,80 @@ export default function LeadershipSkills() {
       <Link to="/leadership" className="text-muted text-sm hover:text-columbia-blue transition-colors mb-8 inline-block">
         ← Leadership
       </Link>
-      <h1 className="text-off-white text-3xl font-bold tracking-tight">Skills & Certifications</h1>
+      <h1 className="text-off-white text-3xl font-bold tracking-tight">Education & Credentials</h1>
       <div className="w-16 h-0.5 bg-columbia-blue mt-2 mb-10" />
 
-      {/* Featured highlights */}
-      <h2 className="text-off-white text-xl font-semibold mb-6">Highlights</h2>
-      <div className="space-y-4 mb-12">
-        {highlights.map((item) => (
-          <div key={item.id} className="bg-surface rounded-xl p-6 border border-columbia-blue/20">
-            <div className="flex items-start justify-between gap-4">
-              <p className="text-off-white font-bold text-lg">{item.skill}</p>
-              <span className="text-xs text-columbia-blue border border-columbia-blue/30 px-2 py-0.5 rounded-full shrink-0">
-                {item.tag}
-              </span>
-            </div>
-            <p className="text-muted text-sm mt-3 leading-relaxed">{item.narrative}</p>
+      {/* University of Houston */}
+      <div className="bg-surface rounded-xl p-8 mb-6">
+        <div className="flex flex-wrap items-center gap-3">
+          <h2 className="text-2xl font-bold text-off-white">{education.school}</h2>
+          <span className="bg-columbia-blue/10 text-columbia-blue text-xs px-2 py-1 rounded font-medium">
+            {education.college}
+          </span>
+          <span className="ml-auto text-muted text-sm">{education.location}</span>
+        </div>
+        <div className="flex gap-2 flex-wrap mt-3">
+          {education.degrees.map((deg) => (
+            <span
+              key={deg.field}
+              className="bg-background text-off-white border border-white/10 text-sm px-3 py-1 rounded-full"
+            >
+              {deg.type} in {deg.field}
+            </span>
+          ))}
+        </div>
+        <p className="text-muted text-sm mt-2">Minor: {education.minor}</p>
+        <div className="flex flex-wrap gap-6 mt-3">
+          <div>
+            <span className="text-muted text-xs">Graduation</span>
+            <p className="text-off-white text-sm font-medium">{education.graduation}</p>
           </div>
-        ))}
+          <div>
+            <span className="text-muted text-xs">GPA</span>
+            <p className="text-off-white text-sm font-medium">{education.gpa}</p>
+          </div>
+        </div>
+        <div className="mt-6">
+          <p className="text-muted text-xs uppercase tracking-widest mb-3">Relevant Coursework</p>
+          <div className="flex flex-wrap gap-2">
+            {education.coursework.map((course) => (
+              <span
+                key={course}
+                className="bg-background text-muted text-xs px-2 py-1 rounded border border-white/5"
+              >
+                {course}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* AFROTC */}
+      <div className="bg-surface rounded-xl p-8 border-l-4 border-uh-red mb-12">
+        <h2 className="text-xl font-bold text-off-white">{afrotc.program}</h2>
+        <p className="text-muted text-sm mt-1">{afrotc.detachment} &middot; UH</p>
+        <p className="text-muted text-sm">{afrotc.dateRange}</p>
+        <p className="text-columbia-blue font-semibold mt-3">{afrotc.commissioning}</p>
+        <p className="text-off-white text-sm mt-1">{afrotc.afsc}</p>
+        <p className="text-muted mt-4 leading-relaxed text-sm">{afrotc.description}</p>
+      </div>
+
+      {/* Featured highlights */}
+      <div className="border-t border-white/5 pt-10 mb-12">
+        <h2 className="text-off-white text-xl font-semibold mb-6">Highlights</h2>
+        <div className="space-y-4">
+          {highlights.map((item) => (
+            <div key={item.id} className="bg-surface rounded-xl p-6 border border-columbia-blue/20">
+              <div className="flex items-start justify-between gap-4">
+                <p className="text-off-white font-bold text-lg">{item.skill}</p>
+                <span className="text-xs text-columbia-blue border border-columbia-blue/30 px-2 py-0.5 rounded-full shrink-0">
+                  {item.tag}
+                </span>
+              </div>
+              <p className="text-muted text-sm mt-3 leading-relaxed">{item.narrative}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Certifications & Awards */}

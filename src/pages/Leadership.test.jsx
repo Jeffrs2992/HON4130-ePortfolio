@@ -18,8 +18,8 @@ describe('Leadership', () => {
     expect(screen.getByText('Experience')).toBeInTheDocument()
   })
 
-  it('renders Skills & Certifications card', () => {
+  it('renders Education & Credentials card', () => {
     render(<MemoryRouter><Leadership /></MemoryRouter>)
-    expect(screen.getByText('Skills & Certifications')).toBeInTheDocument()
+    expect(screen.getByText('Education & Credentials')).toBeInTheDocument()
   })
 })

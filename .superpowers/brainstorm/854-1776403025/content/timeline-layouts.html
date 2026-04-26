@@ -1,0 +1,113 @@
+<h2>How should the timeline look?</h2>
+<p class="subtitle">Pick the layout that feels right for a professional career timeline</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding: 16px; background: #0d1117;">
+      <div style="position:relative; padding-left: 20px; border-left: 2px solid rgba(100,160,220,0.4);">
+        <div style="margin-bottom:12px; position:relative;">
+          <div style="position:absolute; left:-25px; top:6px; width:10px; height:10px; border-radius:50%; background:#6ca0dc;"></div>
+          <div style="background:#1a2230; border-radius:8px; padding:12px;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+              <div>
+                <div style="color:#e6edf3; font-weight:600; font-size:13px;">Deputy Wing Commander</div>
+                <div style="color:#6ca0dc; font-size:11px; margin-top:2px;">AFROTC Det 003</div>
+              </div>
+              <div style="color:#8b949e; font-size:10px;">Spring 2026</div>
+            </div>
+            <div style="margin-top:8px; display:flex; gap:4px;">
+              <span style="background:#6ca0dc22; color:#6ca0dc; font-size:10px; padding:2px 6px; border-radius:4px;">#afrotc</span>
+              <span style="background:#6ca0dc22; color:#6ca0dc; font-size:10px; padding:2px 6px; border-radius:4px;">#leadership</span>
+            </div>
+            <div style="margin-top:8px; color:#6ca0dc; font-size:11px; font-weight:500;">Explore →</div>
+          </div>
+        </div>
+        <div style="margin-bottom:12px; position:relative; opacity:0.6;">
+          <div style="position:absolute; left:-25px; top:6px; width:10px; height:10px; border-radius:50%; background:#6ca0dc;"></div>
+          <div style="background:#1a2230; border-radius:8px; padding:12px;">
+            <div style="color:#e6edf3; font-weight:600; font-size:13px;">START Audit Intern</div>
+            <div style="color:#6ca0dc; font-size:11px; margin-top:2px;">PwC</div>
+          </div>
+        </div>
+        <div style="position:relative; opacity:0.3;">
+          <div style="position:absolute; left:-25px; top:6px; width:10px; height:10px; border-radius:50%; background:#6ca0dc;"></div>
+          <div style="background:#1a2230; border-radius:8px; padding:12px;">
+            <div style="color:#e6edf3; font-weight:600; font-size:13px;">Cyber Officer</div>
+            <div style="color:#6ca0dc; font-size:11px; margin-top:2px;">AFROTC Det 003</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Left-rail timeline</h3>
+      <p>Vertical line with dot markers. Single column, clean and mobile-friendly. Extends the style already used in Leadership/Experience.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding: 16px; background: #0d1117;">
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        <div style="display:flex; align-items:center; gap:8px; color:#8b949e; font-size:10px; text-transform:uppercase; letter-spacing:1px;">2026</div>
+        <div style="background:#1a2230; border-radius:8px; padding:12px; border-left:3px solid #6ca0dc;">
+          <div style="color:#e6edf3; font-weight:600; font-size:13px;">Deputy Wing Commander</div>
+          <div style="color:#6ca0dc; font-size:11px; margin-top:2px;">AFROTC Det 003 · Spring 2026</div>
+          <div style="margin-top:6px; display:flex; gap:4px;">
+            <span style="background:#6ca0dc22; color:#6ca0dc; font-size:10px; padding:2px 6px; border-radius:4px;">#afrotc</span>
+            <span style="background:#6ca0dc22; color:#6ca0dc; font-size:10px; padding:2px 6px; border-radius:4px;">#leadership</span>
+          </div>
+          <div style="margin-top:6px; color:#6ca0dc; font-size:11px; font-weight:500;">Explore →</div>
+        </div>
+        <div style="display:flex; align-items:center; gap:8px; color:#8b949e; font-size:10px; text-transform:uppercase; letter-spacing:1px; margin-top:4px;">2024</div>
+        <div style="background:#1a2230; border-radius:8px; padding:12px; border-left:3px solid #6ca0dc; opacity:0.6;">
+          <div style="color:#e6edf3; font-weight:600; font-size:13px;">START Audit Intern</div>
+          <div style="color:#6ca0dc; font-size:11px; margin-top:2px;">PwC · Summer 2024</div>
+        </div>
+        <div style="background:#1a2230; border-radius:8px; padding:12px; border-left:3px solid #6ca0dc; opacity:0.3;">
+          <div style="color:#e6edf3; font-weight:600; font-size:13px;">Cyber Officer</div>
+          <div style="color:#6ca0dc; font-size:11px; margin-top:2px;">AFROTC Det 003 · Spring 2025</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Year-grouped cards</h3>
+      <p>Entries grouped by year with a left accent border. No dot/line — cleaner grid feel. Year labels give quick orientation.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding: 16px; background: #0d1117;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+        <div style="background:#1a2230; border-radius:8px; padding:12px; border:1px solid rgba(100,160,220,0.2);">
+          <div style="color:#8b949e; font-size:10px; text-transform:uppercase; letter-spacing:1px;">Spring 2026</div>
+          <div style="color:#e6edf3; font-weight:600; font-size:12px; margin-top:4px;">Deputy Wing Commander</div>
+          <div style="color:#6ca0dc; font-size:10px; margin-top:2px;">AFROTC Det 003</div>
+          <div style="margin-top:6px; display:flex; gap:3px; flex-wrap:wrap;">
+            <span style="background:#6ca0dc22; color:#6ca0dc; font-size:9px; padding:1px 5px; border-radius:3px;">#afrotc</span>
+          </div>
+          <div style="margin-top:6px; color:#6ca0dc; font-size:10px; font-weight:500;">Explore →</div>
+        </div>
+        <div style="background:#1a2230; border-radius:8px; padding:12px; border:1px solid rgba(100,160,220,0.2); opacity:0.7;">
+          <div style="color:#8b949e; font-size:10px; text-transform:uppercase; letter-spacing:1px;">Summer 2024</div>
+          <div style="color:#e6edf3; font-weight:600; font-size:12px; margin-top:4px;">START Audit Intern</div>
+          <div style="color:#6ca0dc; font-size:10px; margin-top:2px;">PwC</div>
+        </div>
+        <div style="background:#1a2230; border-radius:8px; padding:12px; border:1px solid rgba(100,160,220,0.2); opacity:0.5;">
+          <div style="color:#8b949e; font-size:10px; text-transform:uppercase; letter-spacing:1px;">Spring 2025</div>
+          <div style="color:#e6edf3; font-weight:600; font-size:12px; margin-top:4px;">Cyber Officer</div>
+          <div style="color:#6ca0dc; font-size:10px; margin-top:2px;">AFROTC Det 003</div>
+        </div>
+        <div style="background:#1a2230; border-radius:8px; padding:12px; border:1px solid rgba(100,160,220,0.2); opacity:0.3;">
+          <div style="color:#8b949e; font-size:10px; text-transform:uppercase; letter-spacing:1px;">Summer 2026</div>
+          <div style="color:#e6edf3; font-weight:600; font-size:12px; margin-top:4px;">Commission · 2Lt USAF</div>
+          <div style="color:#6ca0dc; font-size:10px; margin-top:2px;">17X Cyberspace Ops</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Card grid</h3>
+      <p>Two-column grid of cards. More compact, shows more entries at a glance. Less "timeline" feel, more like a portfolio grid.</p>
+    </div>
+  </div>
+
+</div>

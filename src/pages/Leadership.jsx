@@ -10,8 +10,8 @@ const subPages = [
   {
     to: '/leadership/skills',
     icon: '⚡',
-    title: 'Skills & Certifications',
-    description: 'Technical, leadership, language capabilities, and credentials.',
+    title: 'Education & Credentials',
+    description: 'Degree, AFROTC, skills, certifications, and awards.',
   },
   {
     to: '/leadership/community',
