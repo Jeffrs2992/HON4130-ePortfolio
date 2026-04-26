@@ -6,6 +6,7 @@ describe('Navbar', () => {
   it('renders all navigation links', () => {
     render(<MemoryRouter><Navbar /></MemoryRouter>)
     expect(screen.getByText('About Me')).toBeInTheDocument()
+    expect(screen.getByText('Travel')).toBeInTheDocument()
     expect(screen.getByText('Education')).toBeInTheDocument()
     expect(screen.getByText('Leadership')).toBeInTheDocument()
     expect(screen.getByText('Contact')).toBeInTheDocument()
