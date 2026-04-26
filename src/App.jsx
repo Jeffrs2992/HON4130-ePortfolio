@@ -3,6 +3,7 @@ import PageLayout from './components/layout/PageLayout'
 import Home from './pages/Home'
 import About from './pages/About'
 import Education from './pages/Education'
+import Travel from './pages/Travel'
 import Leadership from './pages/Leadership'
 import LeadershipExperience from './pages/LeadershipExperience'
 import LeadershipSkills from './pages/LeadershipSkills'
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/timeline/:id" element={<TimelineEntry />} />
+          <Route path="/travel" element={<Travel />} />
           <Route path="/education" element={<Education />} />
           <Route path="/leadership" element={<Leadership />} />
           <Route path="/leadership/experience" element={<LeadershipExperience />} />

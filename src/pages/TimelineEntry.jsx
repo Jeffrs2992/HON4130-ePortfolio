@@ -4,12 +4,18 @@ import RoleDetail from '../components/timeline/templates/RoleDetail'
 import MilestoneDetail from '../components/timeline/templates/MilestoneDetail'
 import TrainingDetail from '../components/timeline/templates/TrainingDetail'
 import AwardDetail from '../components/timeline/templates/AwardDetail'
+import TravelDetail from '../components/timeline/templates/TravelDetail'
 
 const templates = {
   role: RoleDetail,
   milestone: MilestoneDetail,
   training: TrainingDetail,
   award: AwardDetail,
+  travel: TravelDetail,
+}
+
+const backLinks = {
+  travel: { to: '/travel', label: '← Travel' },
 }
 
 function getRelated(entry, allEntries) {
@@ -35,11 +41,12 @@ export default function TimelineEntry() {
 
   const Template = templates[entry.type] || RoleDetail
   const related = getRelated(entry, timelineData)
+  const back = backLinks[entry.type] || { to: '/about', label: '← Timeline' }
 
   return (
     <div className="max-w-3xl mx-auto px-6 py-20">
-      <Link to="/about" className="text-muted text-sm hover:text-columbia-blue transition-colors mb-8 inline-block">
-        ← Timeline
+      <Link to={back.to} className="text-muted text-sm hover:text-columbia-blue transition-colors mb-8 inline-block">
+        {back.label}
       </Link>
       <Template entry={entry} related={related} />
     </div>
