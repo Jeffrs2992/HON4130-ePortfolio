@@ -72,10 +72,9 @@
     "dateRange": "Spring 2025",
     "tags": ["travel"],
     "summary": "A spring break road trip through Virginia and North Carolina.",
-    "narrative": "",
     "bullets": [],
+    "blocks": [],
     "photo": null,
-    "photos": [],
     "highlight": true
   },
   {
@@ -105,10 +104,9 @@
     "dateRange": "Winter 2024",
     "tags": ["travel", "road-trip"],
     "summary": "A winter break road trip through 14 national parks across the American West.",
-    "narrative": "",
     "bullets": [],
+    "blocks": [],
     "photo": null,
-    "photos": [],
     "highlight": true
   },
   {
@@ -120,10 +118,9 @@
     "dateRange": "Thanksgiving 2024",
     "tags": ["travel"],
     "summary": "Thanksgiving break trips to Seattle and Boston.",
-    "narrative": "",
     "bullets": [],
+    "blocks": [],
     "photo": null,
-    "photos": [],
     "highlight": true
   },
   {
@@ -153,14 +150,13 @@
     "dateRange": "Summer 2024",
     "tags": ["travel", "study-abroad", "afrotc"],
     "summary": "Spent the summer studying Modern Standard Arabic in Morocco through Project GO — a DoD-funded program for ROTC cadets.",
-    "narrative": "",
     "bullets": [
       "Earned OPIc score of 1 in Modern Standard Arabic",
       "Completed DoD Project GO language immersion program",
       "Traveled to Marrakech, Fes, and the Atlas Mountains"
     ],
+    "blocks": [],
     "photo": null,
-    "photos": [],
     "highlight": true
   },
   {

@@ -8,10 +8,12 @@ const mockEntry = {
   organization: 'University of Maryland · Project GO',
   dateRange: 'Summer 2024',
   tags: ['travel', 'study-abroad'],
-  narrative: 'A transformative summer studying Arabic in Morocco.',
+  blocks: [
+    { text: 'A transformative summer studying Arabic in Morocco.' },
+    { photos: ['/images/morocco1.jpg', '/images/morocco2.jpg'], caption: 'Marrakech medina' },
+  ],
   bullets: ['Earned OPIc score of 1', 'Explored Marrakech'],
   photo: null,
-  photos: ['/images/morocco1.jpg', '/images/morocco2.jpg'],
   type: 'travel',
   date: '2024-06',
   summary: 'A summer in Morocco.',
@@ -27,39 +29,37 @@ describe('TravelDetail', () => {
     expect(screen.getByText('#travel')).toBeInTheDocument()
   })
 
-  it('renders narrative when present', () => {
+  it('renders text blocks', () => {
     render(<MemoryRouter><TravelDetail entry={mockEntry} related={[]} /></MemoryRouter>)
     expect(screen.getByText('A transformative summer studying Arabic in Morocco.')).toBeInTheDocument()
   })
 
-  it('renders Highlights section and bullets when present', () => {
+  it('renders photo block images', () => {
+    render(<MemoryRouter><TravelDetail entry={mockEntry} related={[]} /></MemoryRouter>)
+    const imgs = screen.getAllByTestId('block-photo')
+    expect(imgs.length).toBeGreaterThanOrEqual(2)
+  })
+
+  it('renders photo block caption', () => {
+    render(<MemoryRouter><TravelDetail entry={mockEntry} related={[]} /></MemoryRouter>)
+    expect(screen.getByText('Marrakech medina')).toBeInTheDocument()
+  })
+
+  it('renders Highlights section when bullets present', () => {
     render(<MemoryRouter><TravelDetail entry={mockEntry} related={[]} /></MemoryRouter>)
     expect(screen.getByText('Highlights')).toBeInTheDocument()
     expect(screen.getByText('Earned OPIc score of 1')).toBeInTheDocument()
   })
 
-  it('renders Photos section when photos are present', () => {
-    render(<MemoryRouter><TravelDetail entry={mockEntry} related={[]} /></MemoryRouter>)
-    expect(screen.getByText('Photos')).toBeInTheDocument()
-    const imgs = screen.getAllByRole('img')
-    expect(imgs.length).toBeGreaterThanOrEqual(2)
-  })
-
-  it('omits narrative when narrative is empty', () => {
-    const entry = { ...mockEntry, narrative: '' }
-    render(<MemoryRouter><TravelDetail entry={entry} related={[]} /></MemoryRouter>)
-    expect(screen.queryByText('A transformative summer studying Arabic in Morocco.')).not.toBeInTheDocument()
-  })
-
-  it('omits Highlights section when bullets is empty', () => {
+  it('omits Highlights when bullets is empty', () => {
     const entry = { ...mockEntry, bullets: [] }
     render(<MemoryRouter><TravelDetail entry={entry} related={[]} /></MemoryRouter>)
     expect(screen.queryByText('Highlights')).not.toBeInTheDocument()
   })
 
-  it('omits Photos section when photos is empty', () => {
-    const entry = { ...mockEntry, photos: [] }
+  it('renders nothing from blocks when blocks is empty', () => {
+    const entry = { ...mockEntry, blocks: [] }
     render(<MemoryRouter><TravelDetail entry={entry} related={[]} /></MemoryRouter>)
-    expect(screen.queryByText('Photos')).not.toBeInTheDocument()
+    expect(screen.queryByText('A transformative summer studying Arabic in Morocco.')).not.toBeInTheDocument()
   })
 })

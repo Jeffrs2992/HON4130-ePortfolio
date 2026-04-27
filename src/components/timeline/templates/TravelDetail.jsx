@@ -2,8 +2,57 @@
 import { Link } from 'react-router-dom'
 import { tagMeta, defaultTagColor } from '../../../data/tagRoutes'
 
+function PhotoGroup({ photos, caption }) {
+  const count = photos.length
+
+  let grid
+  if (count === 1) {
+    grid = (
+      <img
+        data-testid="block-photo"
+        src={photos[0]}
+        alt=""
+        className="w-full rounded-lg object-cover"
+        style={{ maxHeight: '420px' }}
+      />
+    )
+  } else if (count === 2) {
+    grid = (
+      <div className="grid grid-cols-2 gap-3">
+        {photos.map((src, i) => (
+          <img data-testid="block-photo" key={i} src={src} alt="" className="w-full rounded-lg object-cover" style={{ height: '240px' }} />
+        ))}
+      </div>
+    )
+  } else if (count === 3) {
+    grid = (
+      <div className="grid grid-cols-3 gap-3">
+        {photos.map((src, i) => (
+          <img data-testid="block-photo" key={i} src={src} alt="" className="w-full rounded-lg object-cover" style={{ height: '180px' }} />
+        ))}
+      </div>
+    )
+  } else {
+    // 4+ photos: natural masonry via CSS columns
+    grid = (
+      <div className="columns-2 md:columns-3 gap-3 [&>img]:mb-3">
+        {photos.map((src, i) => (
+          <img data-testid="block-photo" key={i} src={src} alt="" className="w-full rounded-lg object-cover break-inside-avoid" />
+        ))}
+      </div>
+    )
+  }
+
+  return (
+    <div className="mb-8">
+      {grid}
+      {caption && <p className="text-muted text-xs mt-2 italic">{caption}</p>}
+    </div>
+  )
+}
+
 export default function TravelDetail({ entry, related }) {
-  const { title, organization, dateRange, tags, narrative, photo, photos, bullets } = entry
+  const { title, organization, dateRange, tags, blocks, bullets } = entry
 
   return (
     <>
@@ -26,28 +75,11 @@ export default function TravelDetail({ entry, related }) {
       {/* Title block */}
       <h1 className="text-off-white text-3xl font-bold tracking-tight">{title}</h1>
       <p className="text-columbia-blue text-sm font-medium mt-1">{organization}</p>
-      <p className="text-muted text-xs mt-0.5 mb-6">{dateRange}</p>
+      <p className="text-muted text-xs mt-0.5 mb-8">{dateRange}</p>
 
-      {/* Hero photo — omit if null */}
-      {photo && (
-        <img
-          src={photo}
-          alt={title}
-          className="w-full rounded-lg object-cover mb-8"
-          style={{ maxHeight: '340px' }}
-        />
-      )}
-
-      {/* Narrative — omit if empty */}
-      {narrative && (
-        <p className="text-muted text-base leading-relaxed border-l-2 border-columbia-blue/30 pl-4 mb-8">
-          {narrative}
-        </p>
-      )}
-
-      {/* Highlights — omit if empty */}
+      {/* Highlights — scannable bullets above the essay */}
       {bullets && bullets.length > 0 && (
-        <div className="mb-10">
+        <div className="mb-8">
           <p className="text-columbia-blue text-xs font-bold uppercase tracking-widest mb-4">Highlights</p>
           <ul className="space-y-2">
             {bullets.map((bullet, i) => (
@@ -60,23 +92,20 @@ export default function TravelDetail({ entry, related }) {
         </div>
       )}
 
-      {/* Photo gallery — omit if empty */}
-      {photos && photos.length > 0 && (
-        <div className="mb-10">
-          <p className="text-columbia-blue text-xs font-bold uppercase tracking-widest mb-4">Photos</p>
-          <div className="grid grid-cols-3 gap-3">
-            {photos.map((src, i) => (
-              <img
-                key={i}
-                src={src}
-                alt={`${title} photo ${i + 1}`}
-                className="w-full rounded-lg object-cover"
-                style={{ height: '120px' }}
-              />
-            ))}
-          </div>
-        </div>
-      )}
+      {/* Essay blocks — text paragraphs and photo groups interspersed */}
+      {blocks && blocks.map((block, i) => {
+        if (block.text) {
+          return (
+            <p key={i} className="text-muted text-base leading-relaxed mb-6">
+              {block.text}
+            </p>
+          )
+        }
+        if (block.photos && block.photos.length > 0) {
+          return <PhotoGroup key={i} photos={block.photos} caption={block.caption} />
+        }
+        return null
+      })}
 
       {/* Related */}
       {related && related.length > 0 && (
