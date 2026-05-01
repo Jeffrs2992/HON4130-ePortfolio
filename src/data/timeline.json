@@ -86,8 +86,14 @@
     "summary": "A spring break road trip through Virginia and North Carolina.",
     "bullets": [],
     "paragraphs": [],
-    "photos": [],
-    "photo": null,
+    "photos": [
+      "/images/virginia-north-carolina/1.jpg",
+      "/images/virginia-north-carolina/2.jpg",
+      "/images/virginia-north-carolina/3.jpg",
+      "/images/virginia-north-carolina/4.jpg",
+      "/images/virginia-north-carolina/5.jpg"
+    ],
+    "photo": "/images/virginia-north-carolina/thumb.jpg",
     "highlight": true
   },
   {
@@ -264,8 +270,15 @@
       "The You Can Fly Scholarship came with $3,500 and two weeks at a flight school in Conroe. I took off, landed, and ran through aerial maneuvers in both a Cessna and a Piper — and walked away with something I wasn't expecting: clarity.",
       "Flying didn't move me the way I thought it would. I'd assumed being in the air would feel like a calling, but it didn't — at least not the way it clearly does for others in the program. I left one hour of flight time unused so the funds could go to someone who needed it more. The right call for the right reason."
     ],
-    "photo": null,
-    "photos": [],
+    "photo": "/images/you-can-fly/thumb.jpg",
+    "photos": [
+      "/images/you-can-fly/1.jpg",
+      "/images/you-can-fly/2.jpg",
+      "/images/you-can-fly/3.jpg",
+      "/images/you-can-fly/4.jpg",
+      "/images/you-can-fly/5.jpg",
+      "/images/you-can-fly/6.jpg"
+    ],
     "highlight": true
   },
   {
