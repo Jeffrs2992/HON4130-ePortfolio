@@ -9,6 +9,7 @@
     "tags": ["milestone", "afrotc"],
     "summary": "In May 2026, after four years of AFROTC, I was commissioned as a Second Lieutenant in the United States Air Force, designated as a 17X Cyberspace Operations officer. Everything — the leadership labs, the roles, the late nights — converged into this moment.",
     "bullets": [],
+    "paragraphs": [],
     "photo": null,
     "photos": [],
     "highlight": true
@@ -23,6 +24,7 @@
     "tags": ["milestone", "education"],
     "summary": "Graduated from the University of Houston with a Bachelor of Business Administration in Accounting and Management Information Systems, completing four years of coursework in the Honors College.",
     "bullets": [],
+    "paragraphs": [],
     "photo": null,
     "photos": [],
     "highlight": true
@@ -40,6 +42,11 @@
       "Served as the principal advisor to the Wing Commander across a cadet wing of 80+ cadets",
       "Coordinated operations across four squadrons, ensuring mission continuity and standards compliance",
       "Represented the Wing Commander at events and briefings when unavailable"
+    ],
+    "paragraphs": [
+      "I'll come back to this one with more reflection once I have some distance from it. The hardest part of the role was managing and leading others — specifically, learning what to do when your levers don't work the way you expected. I leaned on my strengths to get things done, but I've also identified things I'd do differently with a second chance at it.",
+      "Highlights: flying to Charlottesville to visit some Project GO friends, and driving down to Raleigh to meet the Boss. Rekindled something I hadn't given up on. Caught the UFC's first Houston event in four years. And a lot of late Wednesday nights with my closest AFROTC friends — the kind that drift past midnight without anyone planning for it.",
+      "Graduation and commissioning feel bigger to other people than they do to me right now. I've been trying to live each day as it comes, especially this last year at UH. I have regrets — I think about them — but I'd rather carry them lightly and let them point me somewhere better than dwell in them."
     ],
     "photo": null,
     "photos": [],
@@ -59,6 +66,11 @@
       "Managed scheduling, records, and coordination for wing-level training events",
       "Mentored junior cadets on professionalism and military bearing"
     ],
+    "paragraphs": [
+      "Hit the ground running coming back from summer. Also read a lot upon returning — won't elaborate. Got to the range with a friend and put several thousand rounds downrange. Took on a more senior leadership position with a group that was still finding its footing in their first semester as POC.",
+      "The semester's highlight was Thanksgiving break. First, Seattle — the weather had different plans for our hiking-heavy itinerary, but we made it work: one genuinely great hike, a lot of time exploring the city, and a ferry to Bainbridge Island. The food alone made the detour worth it. Then a solo flight to Boston for just over 24 hours — my original plans fell through, but my boy came down from New York and we made the most of it. Great dinner, great city.",
+      "Seattle left me with an itch I couldn't ignore."
+    ],
     "photo": null,
     "photos": [],
     "highlight": true
@@ -73,7 +85,8 @@
     "tags": ["travel"],
     "summary": "A spring break road trip through Virginia and North Carolina.",
     "bullets": [],
-    "blocks": [],
+    "paragraphs": [],
+    "photos": [],
     "photo": null,
     "highlight": true
   },
@@ -91,35 +104,78 @@
       "Advised wing leadership on technology integration for training and operations",
       "Coordinated with university IT on AFROTC-specific systems access"
     ],
+    "paragraphs": [
+      "In retrospect, a good semester — even if it didn't always feel like it at the time. I was solid in the role, even when it was maddening, and I had people around me who gave me just enough to keep going.",
+      "This was the season I started going on hikes and eating well with friends — a habit that quietly became something I craved more of. Spent more than I should have on things I didn't need. Also got into my first serious car accident that spring, which I still haven't fully resolved — the car included."
+    ],
     "photo": null,
     "photos": [],
     "highlight": true
   },
   {
     "id": "national-parks-road-trip",
-    "date": "2024-12",
+    "date": "2025-12",
     "type": "travel",
     "title": "14 National Parks",
     "organization": "USA",
-    "dateRange": "Winter 2024",
+    "dateRange": "Winter 2025–26",
     "tags": ["travel", "road-trip"],
-    "summary": "A winter break road trip through 14 national parks across the American West.",
-    "bullets": [],
-    "blocks": [],
+    "summary": "Drove 6,750 miles across 6 states in under a month to visit 14 national parks and 3 state parks.",
+    "bullets": [
+      "6,750 miles across 6 states in under a month",
+      "14 national parks and 3 state parks",
+      "Longest day: Carlsbad Caverns → White Sands → Joshua Tree → Grand Canyon — 750+ miles, 6 miles hiked",
+      "First time camping (glamping doesn't count)"
+    ],
+    "paragraphs": [
+      "Hiking was the unfinished business from Thanksgiving, and I wasn't going to let it sit. Before this trip I'd never driven more than two hours straight. I ended up logging 6,750 miles across six states in under a month — 14 national parks, 3 state parks.",
+      "It opened with a flat tire. Then a fender bender on day two. A check engine light on day three that came back later — same day I got my first speeding ticket (40 in a 35). The most ambitious day was Christmas Eve: Carlsbad Caverns, White Sands, Joshua Tree, and finishing in the Grand Canyon after over 750 miles driven and 6 miles on foot.",
+      "It cost three times what I'd planned for. I'd do it again.",
+      "I left the day after a final I'd managed to reschedule, came back and went straight into LeaderShape, then straight into my graduating semester. The margins were thin throughout — but by then, that was a familiar feeling."
+    ],
+    "photos": [],
     "photo": null,
     "highlight": true
   },
   {
     "id": "seattle-boston",
-    "date": "2024-11",
+    "date": "2025-11",
     "type": "travel",
     "title": "Seattle + Boston",
     "organization": "USA",
-    "dateRange": "Thanksgiving 2024",
+    "dateRange": "Thanksgiving 2025",
     "tags": ["travel"],
-    "summary": "Thanksgiving break trips to Seattle and Boston.",
+    "summary": "Thanksgiving break split between Seattle and Boston — one hike, one ferry, one great dinner, and an itch that needed scratching.",
     "bullets": [],
-    "blocks": [],
+    "paragraphs": [
+      "Seattle was supposed to be a hiking trip. The weather had other plans, so the itinerary shifted — but that's not a bad thing. We got one genuinely great hike in, spent more time exploring the city, and took a ferry over to Bainbridge Island. The food was exceptional if you're ever looking for recommendations.",
+      "Then a solo flight to Boston for just over 24 hours. My original plans fell through but my boy came down from New York, and we had a great dinner and a great time. Both cities delivered.",
+      "Seattle left me wanting more trail time than I got. That feeling didn't go away."
+    ],
+    "photos": [],
+    "photo": null,
+    "highlight": true
+  },
+  {
+    "id": "morocco-project-go",
+    "date": "2025-06",
+    "type": "travel",
+    "title": "Morocco",
+    "organization": "University of Maryland · Project GO",
+    "dateRange": "Summer 2025",
+    "tags": ["travel", "study-abroad", "afrotc"],
+    "summary": "Studied Modern Standard Arabic for 2.5 weeks at UMD, then spent 6.5 weeks in Morocco studying MSA and Darija through the DoD-funded Project GO program.",
+    "bullets": [
+      "Studied Modern Standard Arabic and Darija over 9 weeks",
+      "Completed DoD Project GO — a competitive language immersion program for ROTC cadets",
+      "Lived with a host family in Morocco"
+    ],
+    "paragraphs": [
+      "Nearly a year later, I still think about it regularly. Not just Morocco — the whole of it. The language learning was intense and I loved that, even if I found myself coasting once I wasn't being challenged enough. I could score in the top three without doing the homework, which mostly just meant I got away with bad habits longer than I should have.",
+      "The harder part was the living situation. My assigned roommate and I didn't mesh, the host family's space was difficult to be in, and a few people in the program made certain days genuinely miserable. I'm not proud of some of how I responded to those frustrations.",
+      "But two people helped pull me out of it — who shifted the way I was thinking about perspective itself. For that, I'm deeply grateful. Project GO turned out to be one of the most transformative experiences I've had, in ways I genuinely couldn't have predicted going in."
+    ],
+    "photos": [],
     "photo": null,
     "highlight": true
   },
@@ -137,26 +193,12 @@
       "Managed scheduling and resource allocation across squadron activities",
       "Ensured readiness and availability of training materials and gear"
     ],
+    "paragraphs": [
+      "First semester as a POC, and the transition hit harder than I expected. There was a lot going on personally — things I've kept to myself and intend to keep that way. Looking back, this semester is something of a blur.",
+      "The two things that stand out clearly: getting accepted into Project GO and turning down my PwC return offer. Both were the right decisions."
+    ],
     "photo": null,
     "photos": [],
-    "highlight": true
-  },
-  {
-    "id": "morocco-project-go",
-    "date": "2024-06",
-    "type": "travel",
-    "title": "Morocco",
-    "organization": "University of Maryland · Project GO",
-    "dateRange": "Summer 2024",
-    "tags": ["travel", "study-abroad", "afrotc"],
-    "summary": "Spent the summer studying Modern Standard Arabic in Morocco through Project GO — a DoD-funded program for ROTC cadets.",
-    "bullets": [
-      "Earned OPIc score of 1 in Modern Standard Arabic",
-      "Completed DoD Project GO language immersion program",
-      "Traveled to Marrakech, Fes, and the Atlas Mountains"
-    ],
-    "blocks": [],
-    "photo": null,
     "highlight": true
   },
   {
@@ -173,17 +215,21 @@
       "Prepared and reviewed workpapers in line with PCAOB standards",
       "Participated in START cohort workshops on audit methodology and firm culture"
     ],
+    "paragraphs": [
+      "The summer started at Disney World — PwC flew the intern cohort out for a week of orientation, which is a hard situation to find fault with. Coming back to Houston meant learning what the day-to-day actually looks like inside a Big Four firm. I'm grateful for both the opportunity and everything that came with it.",
+      "Field Training followed immediately after — and that was a different kind of hard. TD-3 was the worst of it. I remember laying in my bunk that night with my feet throbbing, questioning whether I had what it took to keep going. I did. Graduated with Flight 1. The highlights that carried me through: incredibly lucky roommates, combatives, and my Form 2 evaluator."
+    ],
     "photo": null,
     "photos": [],
     "highlight": true
   },
   {
     "id": "field-training-graduate",
-    "date": "2023-06",
+    "date": "2024-06",
     "type": "training",
     "title": "AFROTC Field Training Graduate",
     "organization": "Air Force ROTC",
-    "dateRange": "Summer 2023",
+    "dateRange": "Summer 2024",
     "tags": ["afrotc", "training"],
     "summary": "Completed AFROTC Field Training, a competitive summer encampment that evaluates leadership under pressure and is a required milestone for commissioning.",
     "bullets": [
@@ -191,9 +237,36 @@
       "Competed with cadets from detachments nationwide",
       "Completed as a required milestone on the path to commissioning"
     ],
+    "paragraphs": [
+      "The semester leading into field training — Spring 2024 — had 'difficult' written all over it before it even started. Intermediate Accounting II and Java for MIS in the same semester, both considered the hardest course in their respective programs, plus full field training prep on top of it. I went in with my eyes open and came out with one of my highest GPAs of college.",
+      "Some things that made it manageable: living at the Lofts my sophomore year, surrounded by friends (most of them seniors on their way out). Getting the PwC offer call while pulling into a Buc-ee's on a trip to Austin for Holloweekend. A road trip with AFROTC friends to see the total solar eclipse in Waco. And getting all four wisdom teeth pulled, which somehow felt like a relief by that point.",
+      "Field Training itself was a different kind of hard. TD-3 was the worst of it — I remember laying in my bunk that night, feet throbbing, genuinely questioning how much more I could take. I made it through. Graduated with Flight 1. The things that carried me: incredibly lucky roommates, combatives, and my Form 2 evaluator."
+    ],
     "photo": null,
     "photos": [],
     "highlight": true
+  },
+  {
+    "id": "you-can-fly",
+    "date": "2023-08",
+    "type": "training",
+    "title": "You Can Fly Scholarship",
+    "organization": "AOPA · AFROTC",
+    "dateRange": "Summer 2023",
+    "tags": ["afrotc", "training"],
+    "summary": "Received a $3,500 scholarship to attend flight school in Conroe, TX — learning to take off, land, and run aerial maneuvers in a Cessna and a Piper over two weeks.",
+    "bullets": [
+      "Flew a Cessna 172 and Piper over two weeks of instruction",
+      "Practiced takeoffs, landings, and aerial maneuvers",
+      "Left one hour unused so the remaining funds could benefit another cadet"
+    ],
+    "paragraphs": [
+      "The You Can Fly Scholarship came with $3,500 and two weeks at a flight school in Conroe. I took off, landed, and ran through aerial maneuvers in both a Cessna and a Piper — and walked away with something I wasn't expecting: clarity.",
+      "Flying didn't move me the way I thought it would. I'd assumed being in the air would feel like a calling, but it didn't — at least not the way it clearly does for others in the program. I left one hour of flight time unused so the funds could go to someone who needed it more. The right call for the right reason."
+    ],
+    "photo": null,
+    "photos": [],
+    "highlight": false
   },
   {
     "id": "uh-afrotc-start",
@@ -205,6 +278,7 @@
     "tags": ["milestone", "education", "afrotc"],
     "summary": "Enrolled at the University of Houston and joined AFROTC Detachment 003, beginning four years of simultaneous academic and military preparation toward a commission in the United States Air Force.",
     "bullets": [],
+    "paragraphs": [],
     "photo": null,
     "photos": [],
     "highlight": true
