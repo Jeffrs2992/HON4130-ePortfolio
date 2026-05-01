@@ -15,6 +15,9 @@ dist-ssr
 # Superpowers brainstorm/visual companion files
 .superpowers/
 
+# Excluded PDFs
+public/JPM_2012.pdf
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
