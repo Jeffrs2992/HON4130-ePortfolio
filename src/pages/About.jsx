@@ -1,4 +1,7 @@
 import TimelineRail from '../components/timeline/TimelineRail'
+import { imgSrc } from '../utils/imgSrc'
+
+const HEADSHOT = imgSrc('headshot.jpg')
 
 export default function About() {
   return (
@@ -30,7 +33,13 @@ export default function About() {
           </p>
         </div>
         <div className="md:col-span-1">
-          <div className="bg-surface border border-white/10 rounded-xl aspect-square w-full flex items-center justify-center">
+          <img
+            src={HEADSHOT}
+            alt="Japheth Silva"
+            className="rounded-xl w-full object-cover object-top aspect-square"
+            onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.nextSibling.style.display = 'flex' }}
+          />
+          <div className="bg-surface border border-white/10 rounded-xl aspect-square w-full items-center justify-center hidden">
             <p className="text-muted text-sm text-center p-4">Photo Coming Soon</p>
           </div>
         </div>
