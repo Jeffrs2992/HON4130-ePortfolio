@@ -1,11 +1,13 @@
 // src/components/timeline/PhotoGallery.jsx
 import { useState, useEffect } from 'react'
+import { imgSrc } from '../../utils/imgSrc'
 
 export default function PhotoGallery({ photos }) {
   const [idx, setIdx] = useState(0)
   const [lightboxOpen, setLightboxOpen] = useState(false)
 
-  const count = photos?.length ?? 0
+  const resolved = photos?.map(imgSrc) ?? []
+  const count = resolved.length
   const prev = () => setIdx((i) => (i - 1 + count) % count)
   const next = () => setIdx((i) => (i + 1) % count)
 
@@ -41,7 +43,7 @@ export default function PhotoGallery({ photos }) {
       >
         <img
           data-testid="carousel-photo"
-          src={photos[idx]}
+          src={resolved[idx]}
           alt=""
           className="w-full h-full object-cover cursor-zoom-in"
           onClick={() => setLightboxOpen(true)}
@@ -67,7 +69,7 @@ export default function PhotoGallery({ photos }) {
             {/* Dot indicators (≤12 photos) */}
             {count <= 12 ? (
               <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
-                {photos.map((_, i) => (
+                {resolved.map((_, i) => (
                   <button
                     key={i}
                     onClick={() => setIdx(i)}
@@ -104,7 +106,7 @@ export default function PhotoGallery({ photos }) {
           )}
 
           <img
-            src={photos[idx]}
+            src={resolved[idx]}
             alt=""
             className="max-h-[90vh] max-w-[90vw] object-contain rounded-lg"
             onClick={(e) => e.stopPropagation()}

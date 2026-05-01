@@ -1,9 +1,11 @@
 // src/components/timeline/templates/MilestoneDetail.jsx
 import { Link } from 'react-router-dom'
 import { tagMeta, defaultTagColor } from '../../../data/tagRoutes'
+import PhotoGallery from '../PhotoGallery'
+import { imgSrc } from '../../../utils/imgSrc'
 
 export default function MilestoneDetail({ entry, related }) {
-  const { title, organization, dateRange, tags, summary, photo, photos } = entry
+  const { title, organization, dateRange, tags, summary, photo, photos, paragraphs } = entry
 
   return (
     <>
@@ -26,33 +28,25 @@ export default function MilestoneDetail({ entry, related }) {
       {/* Title block */}
       <h1 className="text-off-white text-3xl font-bold tracking-tight">{title}</h1>
       <p className="text-columbia-blue text-sm font-medium mt-1">{organization}</p>
-      <p className="text-muted text-xs mt-0.5 mb-6">{dateRange}</p>
+      <p className="text-muted text-xs mt-0.5 mb-8">{dateRange}</p>
 
       {/* Hero photo */}
-      {photo ? (
-        <img src={photo} alt={title} className="w-full rounded-lg object-cover mb-8" style={{ maxHeight: '340px' }} />
-      ) : (
-        <div className="w-full rounded-lg bg-surface border border-white/5 flex items-center justify-center mb-8" style={{ height: '200px' }}>
-          <span className="text-muted text-xs">Photo Coming Soon</span>
-        </div>
+      {photo && (
+        <img src={imgSrc(photo)} alt={title} className="w-full rounded-lg object-cover mb-8" style={{ maxHeight: '340px' }} />
       )}
 
-      {/* Narrative */}
-      <p className="text-muted text-base leading-relaxed border-l-2 border-columbia-blue/30 pl-4 mb-8">
-        {summary}
-      </p>
+      {/* Essay paragraphs — fall back to summary */}
+      {paragraphs && paragraphs.length > 0
+        ? paragraphs.map((p, i) => (
+            <p key={i} className="text-muted text-base leading-relaxed mb-5">{p}</p>
+          ))
+        : summary && (
+            <p className="text-muted text-base leading-relaxed border-l-2 border-columbia-blue/30 pl-4 mb-8">{summary}</p>
+          )
+      }
 
-      {/* Photo grid */}
-      {photos && photos.length > 0 && (
-        <div className="mb-10">
-          <p className="text-columbia-blue text-xs font-bold uppercase tracking-widest mb-4">More From This Day</p>
-          <div className="grid grid-cols-3 gap-3">
-            {photos.map((src, i) => (
-              <img key={i} src={src} alt={`${title} photo ${i + 1}`} className="w-full rounded-lg object-cover aspect-square" />
-            ))}
-          </div>
-        </div>
-      )}
+      {/* Photo gallery */}
+      <PhotoGallery photos={photos} />
 
       {/* Related */}
       {related && related.length > 0 && (

@@ -2,6 +2,7 @@
 import { Link } from 'react-router-dom'
 import { tagMeta, defaultTagColor } from '../../../data/tagRoutes'
 import PhotoGallery from '../PhotoGallery'
+import { imgSrc } from '../../../utils/imgSrc'
 
 export default function RoleDetail({ entry, related }) {
   const { title, organization, dateRange, tags, summary, photo, photos, bullets, paragraphs } = entry
@@ -31,7 +32,7 @@ export default function RoleDetail({ entry, related }) {
 
       {/* Hero photo */}
       {photo && (
-        <img src={photo} alt={title} className="w-full rounded-lg object-cover mb-8" style={{ maxHeight: '340px' }} />
+        <img src={imgSrc(photo)} alt={title} className="w-full rounded-lg object-cover mb-8" style={{ maxHeight: '340px' }} />
       )}
 
       {/* What I Did */}
