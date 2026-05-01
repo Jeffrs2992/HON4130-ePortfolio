@@ -2,6 +2,10 @@ import { render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import TimelineCard from './TimelineCard'
 
+vi.mock('../../utils/entryPhotos', () => ({
+  entryPhotos: () => ({ thumb: null, gallery: [] }),
+}))
+
 const entry = {
   id: 'test-entry',
   title: 'Test Role',

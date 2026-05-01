@@ -1,15 +1,18 @@
 import { Link } from 'react-router-dom'
 import { tagMeta, defaultTagColor } from '../../data/tagRoutes'
+import { imgSrc } from '../../utils/imgSrc'
+import { entryPhotos } from '../../utils/entryPhotos'
 
 export default function TimelineCard({ entry }) {
-  const { id, title, organization, dateRange, tags, summary, photo } = entry
+  const { id, title, organization, dateRange, tags, summary } = entry
+  const { thumb } = entryPhotos(id)
 
   return (
     <div className="pl-1 mb-12">
       {/* Photo */}
-      {photo ? (
+      {thumb ? (
         <img
-          src={photo}
+          src={imgSrc(thumb)}
           alt={title}
           className="w-full rounded-lg object-cover mb-3"
           style={{ maxHeight: '260px' }}

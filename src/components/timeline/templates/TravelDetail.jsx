@@ -2,11 +2,12 @@
 import { Link } from 'react-router-dom'
 import { tagMeta, defaultTagColor } from '../../../data/tagRoutes'
 import PhotoGallery from '../PhotoGallery'
+import { imgSrc } from '../../../utils/imgSrc'
 import { entryPhotos } from '../../../utils/entryPhotos'
 
 export default function TravelDetail({ entry, related }) {
   const { title, organization, dateRange, tags, bullets, paragraphs } = entry
-  const { gallery } = entryPhotos(entry.id)
+  const { thumb, gallery } = entryPhotos(entry.id)
 
   return (
     <>
@@ -30,6 +31,11 @@ export default function TravelDetail({ entry, related }) {
       <h1 className="text-off-white text-3xl font-bold tracking-tight">{title}</h1>
       <p className="text-columbia-blue text-sm font-medium mt-1">{organization}</p>
       <p className="text-muted text-xs mt-0.5 mb-8">{dateRange}</p>
+
+      {/* Hero photo */}
+      {thumb && (
+        <img src={imgSrc(thumb)} alt={title} className="w-full rounded-lg object-cover mb-8" style={{ maxHeight: '340px' }} />
+      )}
 
       {/* Highlights */}
       {bullets && bullets.length > 0 && (
