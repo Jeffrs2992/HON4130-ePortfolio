@@ -36,9 +36,9 @@ describe('TravelDetail', () => {
     expect(screen.getByText('Nearly a year later I still think about it.')).toBeInTheDocument()
   })
 
-  it('renders gallery thumbnails when photos present', () => {
+  it('renders carousel photo when photos present', () => {
     render(<MemoryRouter><TravelDetail entry={mockEntry} related={[]} /></MemoryRouter>)
-    expect(screen.getAllByTestId('gallery-thumb').length).toBe(2)
+    expect(screen.getByTestId('carousel-photo')).toBeInTheDocument()
   })
 
   it('renders Highlights section when bullets present', () => {
@@ -53,10 +53,11 @@ describe('TravelDetail', () => {
     expect(screen.queryByText('Highlights')).not.toBeInTheDocument()
   })
 
-  it('omits gallery when photos is empty', () => {
+  it('shows placeholder when photos is empty', () => {
     const entry = { ...mockEntry, photos: [] }
     render(<MemoryRouter><TravelDetail entry={entry} related={[]} /></MemoryRouter>)
-    expect(screen.queryByTestId('gallery-thumb')).not.toBeInTheDocument()
+    expect(screen.getByTestId('photo-placeholder')).toBeInTheDocument()
+    expect(screen.queryByTestId('carousel-photo')).not.toBeInTheDocument()
   })
 
   it('renders nothing from paragraphs when paragraphs is empty', () => {
