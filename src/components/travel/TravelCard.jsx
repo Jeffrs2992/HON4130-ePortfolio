@@ -1,15 +1,17 @@
 import { Link } from 'react-router-dom'
 import { tagMeta, defaultTagColor } from '../../data/tagRoutes'
 import { imgSrc } from '../../utils/imgSrc'
+import { entryPhotos } from '../../utils/entryPhotos'
 
 export default function TravelCard({ entry }) {
-  const { id, title, organization, dateRange, tags, photo } = entry
+  const { id, title, organization, dateRange, tags } = entry
+  const { thumb } = entryPhotos(id)
 
   return (
     <div className="bg-surface rounded-xl overflow-hidden border border-white/5 hover:border-columbia-blue/40 transition-colors">
-      {photo ? (
+      {thumb ? (
         <img
-          src={imgSrc(photo)}
+          src={imgSrc(thumb)}
           alt={title}
           className="w-full object-cover"
           style={{ height: '180px' }}

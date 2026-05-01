@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom'
 import { tagMeta, defaultTagColor } from '../../../data/tagRoutes'
 import PhotoGallery from '../PhotoGallery'
 import { imgSrc } from '../../../utils/imgSrc'
+import { entryPhotos } from '../../../utils/entryPhotos'
 
 export default function MilestoneDetail({ entry, related }) {
-  const { title, organization, dateRange, tags, summary, photo, photos, paragraphs } = entry
+  const { title, organization, dateRange, tags, summary, paragraphs } = entry
+  const { thumb, gallery } = entryPhotos(entry.id)
 
   return (
     <>
@@ -31,8 +33,8 @@ export default function MilestoneDetail({ entry, related }) {
       <p className="text-muted text-xs mt-0.5 mb-8">{dateRange}</p>
 
       {/* Hero photo */}
-      {photo && (
-        <img src={imgSrc(photo)} alt={title} className="w-full rounded-lg object-cover mb-8" style={{ maxHeight: '340px' }} />
+      {thumb && (
+        <img src={imgSrc(thumb)} alt={title} className="w-full rounded-lg object-cover mb-8" style={{ maxHeight: '340px' }} />
       )}
 
       {/* Essay paragraphs — fall back to summary */}
@@ -46,7 +48,7 @@ export default function MilestoneDetail({ entry, related }) {
       }
 
       {/* Photo gallery */}
-      <PhotoGallery photos={photos} />
+      <PhotoGallery photos={gallery} />
 
       {/* Related */}
       {related && related.length > 0 && (

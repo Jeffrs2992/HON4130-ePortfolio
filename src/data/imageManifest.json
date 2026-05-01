@@ -1,0 +1,23 @@
+{
+  "virginia-north-carolina": {
+    "thumb": "/images/virginia-north-carolina/thumb.jpg",
+    "gallery": [
+      "/images/virginia-north-carolina/1.jpg",
+      "/images/virginia-north-carolina/2.jpg",
+      "/images/virginia-north-carolina/3.jpg",
+      "/images/virginia-north-carolina/4.jpg",
+      "/images/virginia-north-carolina/5.jpg"
+    ]
+  },
+  "you-can-fly": {
+    "thumb": "/images/you-can-fly/thumb.jpg",
+    "gallery": [
+      "/images/you-can-fly/1.jpg",
+      "/images/you-can-fly/2.jpg",
+      "/images/you-can-fly/3.jpg",
+      "/images/you-can-fly/4.jpg",
+      "/images/you-can-fly/5.jpg",
+      "/images/you-can-fly/6.jpg"
+    ]
+  }
+}

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node scripts/generate-image-manifest.js && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",

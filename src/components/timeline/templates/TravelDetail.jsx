@@ -2,9 +2,11 @@
 import { Link } from 'react-router-dom'
 import { tagMeta, defaultTagColor } from '../../../data/tagRoutes'
 import PhotoGallery from '../PhotoGallery'
+import { entryPhotos } from '../../../utils/entryPhotos'
 
 export default function TravelDetail({ entry, related }) {
-  const { title, organization, dateRange, tags, bullets, paragraphs, photos } = entry
+  const { title, organization, dateRange, tags, bullets, paragraphs } = entry
+  const { gallery } = entryPhotos(entry.id)
 
   return (
     <>
@@ -50,7 +52,7 @@ export default function TravelDetail({ entry, related }) {
       ))}
 
       {/* Photo gallery */}
-      <PhotoGallery photos={photos} />
+      <PhotoGallery photos={gallery} />
 
       {/* Related */}
       {related && related.length > 0 && (

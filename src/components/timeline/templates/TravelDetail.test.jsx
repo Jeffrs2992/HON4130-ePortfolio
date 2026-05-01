@@ -2,6 +2,15 @@ import { render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import TravelDetail from './TravelDetail'
 
+vi.mock('../../../utils/entryPhotos', () => ({
+  entryPhotos: (id) => ({
+    thumb: '/images/mock/thumb.jpg',
+    gallery: id === 'morocco-project-go'
+      ? ['/images/mock/1.jpg', '/images/mock/2.jpg']
+      : [],
+  }),
+}))
+
 const mockEntry = {
   id: 'morocco-project-go',
   title: 'Morocco',
@@ -53,8 +62,8 @@ describe('TravelDetail', () => {
     expect(screen.queryByText('Highlights')).not.toBeInTheDocument()
   })
 
-  it('shows placeholder when photos is empty', () => {
-    const entry = { ...mockEntry, photos: [] }
+  it('shows placeholder when no photos in manifest', () => {
+    const entry = { ...mockEntry, id: 'entry-with-no-photos' }
     render(<MemoryRouter><TravelDetail entry={entry} related={[]} /></MemoryRouter>)
     expect(screen.getByTestId('photo-placeholder')).toBeInTheDocument()
     expect(screen.queryByTestId('carousel-photo')).not.toBeInTheDocument()
